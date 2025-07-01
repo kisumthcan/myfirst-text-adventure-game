@@ -1,0 +1,20 @@
+[
+  {
+    "id": "persona_architect",
+    "name": "资深架构师",
+    "description": "你是代码城的传奇人物，拥有15年编程经验。你的代码优雅如诗，但咖啡因成瘾，社交能力堪忧。同事们都敬畏你的技术，但也害怕你在会议上的毒舌。",
+    "initial_state": {
+      "points": { "coding": 20, "caffeine": 5, "social": 5 },
+      "attributes": ["is_architect", "coffee_addiction"]
+    }
+  },
+  {
+    "id": "persona_intern",
+    "name": "热血实习生",
+    "description": "你是刚从代码学院毕业的新人，对编程充满热情但经验不足。你精力充沛，不需要太多咖啡因，而且善于与人交流。虽然代码能力还有待提高，但你的学习能力很强。",
+    "initial_state": {
+      "points": { "coding": 5, "caffeine": 20, "social": 15 },
+      "attributes": ["is_intern", "high_energy", "quick_learner"]
+    }
+  }
+]

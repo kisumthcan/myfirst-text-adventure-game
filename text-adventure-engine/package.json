@@ -1,0 +1,21 @@
+{
+  "name": "text-adventure-engine",
+  "version": "1.0.0",
+  "description": "A modular and extensible text adventure game engine",
+  "main": "game/main.js",
+  "scripts": {
+    "start": "node game/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "text-adventure",
+    "game-engine",
+    "interactive-fiction"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^7.5.3",
+    "inquirer": "^9.2.0"
+  }
+}

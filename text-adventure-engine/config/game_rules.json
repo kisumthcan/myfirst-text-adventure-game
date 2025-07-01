@@ -1,0 +1,9 @@
+{
+  "total_turns": 36,
+  "point_types": ["coding", "caffeine", "social"],
+  "default_ending": {
+    "id": "default_ending",
+    "name": "平凡的结局",
+    "text": "36天的死线到了。你的项目勉强能跑，但谈不上完美。产品经理老王叹了口气，甲方爸爸摇了摇头。不过，至少你没有被送到栈溢出监狱。这也算是一种成功吧？"
+  }
+}

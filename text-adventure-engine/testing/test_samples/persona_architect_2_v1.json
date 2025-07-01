@@ -1,0 +1,554 @@
+{
+  "testId": "persona_architect_2_v1",
+  "character": "资深架构师",
+  "characterId": "persona_architect",
+  "strategy": "社交导向_v1",
+  "choices": [
+    2,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    2,
+    1,
+    1
+  ],
+  "success": true,
+  "ending": {
+    "id": "ending_zen_coder",
+    "name": "佛系码农",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "social": 18
+      },
+      "attributes": [
+        "wellness_advocate",
+        "team_player"
+      ],
+      "priority": 85
+    },
+    "text": "虽然项目只能算勉强完成，但你在这个过程中学会了工作与生活的平衡。你建立了深厚的同事友谊，推广了健康的工作方式。甲方爸爸虽然不是很满意，但团队的士气从未如此高涨。你成为了代码城最受欢迎的码农！",
+    "choices": []
+  },
+  "finalState": {
+    "points": {
+      "coding": 31,
+      "caffeine": 5,
+      "social": 19
+    },
+    "attributes": [
+      "is_architect",
+      "coffee_addiction",
+      "project_started",
+      "confident_start",
+      "has_coffee",
+      "coffee_break_done",
+      "frustrated",
+      "keyboard_issue_fixed",
+      "requirement_changed",
+      "stressed",
+      "learned_optimization",
+      "code_review_done",
+      "team_player",
+      "bug_solved",
+      "wellness_advocate",
+      "coffee_crisis_handled"
+    ],
+    "characterId": "persona_architect"
+  },
+  "totalTurns": 23,
+  "pathLog": [
+    {
+      "turn": 0,
+      "action": "character_selected",
+      "character": "资深架构师",
+      "state": {
+        "points": {
+          "coding": 20,
+          "caffeine": 5,
+          "social": 5
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 1,
+      "action": "choice_made",
+      "event": "项目启动",
+      "eventId": "main_01_project_assignment",
+      "choice": "充满信心地接受挑战",
+      "choiceIndex": 0,
+      "stateBefore": {
+        "points": {
+          "coding": 20,
+          "caffeine": 5,
+          "social": 5
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 1,
+      "action": "state_updated",
+      "outcome": {
+        "text": "作为资深架构师，你快速浏览了需求文档，心中已有了技术方案。",
+        "points_change": {
+          "coding": 3,
+          "social": 2
+        },
+        "attributes_add": [
+          "project_started",
+          "confident_start"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 23,
+          "caffeine": 5,
+          "social": 7
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 2,
+      "action": "choice_made",
+      "event": "咖啡时光",
+      "eventId": "common_coffee_break",
+      "choice": "来一杯浓缩咖啡",
+      "choiceIndex": 0,
+      "stateBefore": {
+        "points": {
+          "coding": 23,
+          "caffeine": 5,
+          "social": 7
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 2,
+      "action": "state_updated",
+      "outcome": {
+        "text": "浓郁的咖啡让你瞬间精神焕发！不过心跳有点快...",
+        "points_change": {
+          "caffeine": 3,
+          "coding": 1
+        },
+        "attributes_add": [
+          "has_coffee",
+          "coffee_break_done"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 24,
+          "caffeine": 8,
+          "social": 7
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 5,
+      "action": "choice_made",
+      "event": "键盘闹情绪",
+      "eventId": "common_keyboard_tantrum",
+      "choice": "将就着用屏幕键盘",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 24,
+          "caffeine": 8,
+          "social": 7
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 5,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你只能用屏幕键盘慢慢敲代码，效率大幅下降...",
+        "points_change": {
+          "coding": -2,
+          "caffeine": -1
+        },
+        "attributes_add": [
+          "frustrated",
+          "keyboard_issue_fixed"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 22,
+          "caffeine": 7,
+          "social": 7
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 8,
+      "action": "choice_made",
+      "event": "需求大变更",
+      "eventId": "main_02_requirement_change",
+      "choice": "表达不满但接受变更",
+      "choiceIndex": 0,
+      "stateBefore": {
+        "points": {
+          "coding": 22,
+          "caffeine": 7,
+          "social": 7
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 8,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你虽然有些抱怨，但还是接受了变更。老王有些尴尬但很感激。",
+        "points_change": {
+          "coding": 2,
+          "social": 2,
+          "caffeine": -2
+        },
+        "attributes_add": [
+          "requirement_changed",
+          "stressed"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 24,
+          "caffeine": 5,
+          "social": 9
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 10,
+      "action": "choice_made",
+      "event": "代码评审",
+      "eventId": "common_code_review",
+      "choice": "虚心请教改进建议",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 24,
+          "caffeine": 5,
+          "social": 9
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 10,
+      "action": "state_updated",
+      "outcome": {
+        "text": "架构师被你的谦逊态度打动，耐心指出了几个优化点。",
+        "points_change": {
+          "coding": 2,
+          "social": 3
+        },
+        "attributes_add": [
+          "learned_optimization",
+          "code_review_done"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 26,
+          "caffeine": 5,
+          "social": 12
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "learned_optimization",
+          "code_review_done"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 15,
+      "action": "choice_made",
+      "event": "Bug大军来袭",
+      "eventId": "main_03_bug_invasion",
+      "choice": "请求同事协助调试",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 26,
+          "caffeine": 5,
+          "social": 12
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "learned_optimization",
+          "code_review_done"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 15,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你组织了一个调试小队，大家分工合作，很快就解决了Bug问题。",
+        "points_change": {
+          "social": 4,
+          "coding": 3
+        },
+        "attributes_add": [
+          "team_player",
+          "bug_solved"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 29,
+          "caffeine": 5,
+          "social": 16
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "learned_optimization",
+          "code_review_done",
+          "team_player",
+          "bug_solved"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 22,
+      "action": "choice_made",
+      "event": "咖啡危机",
+      "eventId": "main_04_coffee_crisis",
+      "choice": "趁机推广健康的工作方式",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 29,
+          "caffeine": 5,
+          "social": 16
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "learned_optimization",
+          "code_review_done",
+          "team_player",
+          "bug_solved"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 22,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你组织了茶话会和健身活动，虽然有些同事不满，但身体更健康了。",
+        "points_change": {
+          "social": 3,
+          "coding": 2
+        },
+        "attributes_add": [
+          "wellness_advocate",
+          "coffee_crisis_handled"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 31,
+          "caffeine": 5,
+          "social": 19
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "learned_optimization",
+          "code_review_done",
+          "team_player",
+          "bug_solved",
+          "wellness_advocate",
+          "coffee_crisis_handled"
+        ],
+        "characterId": "persona_architect"
+      }
+    },
+    {
+      "turn": 23,
+      "action": "ending_reached",
+      "ending": "佛系码农",
+      "endingId": "ending_zen_coder",
+      "finalState": {
+        "points": {
+          "coding": 31,
+          "caffeine": 5,
+          "social": 19
+        },
+        "attributes": [
+          "is_architect",
+          "coffee_addiction",
+          "project_started",
+          "confident_start",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "learned_optimization",
+          "code_review_done",
+          "team_player",
+          "bug_solved",
+          "wellness_advocate",
+          "coffee_crisis_handled"
+        ],
+        "characterId": "persona_architect"
+      }
+    }
+  ]
+}

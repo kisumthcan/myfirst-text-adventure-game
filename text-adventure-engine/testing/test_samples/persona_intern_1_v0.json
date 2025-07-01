@@ -1,0 +1,571 @@
+{
+  "testId": "persona_intern_1_v0",
+  "character": "热血实习生",
+  "characterId": "persona_intern",
+  "strategy": "平衡发展_v0",
+  "choices": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "success": true,
+  "ending": {
+    "id": "ending_zen_coder",
+    "name": "佛系码农",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "social": 18
+      },
+      "attributes": [
+        "wellness_advocate",
+        "team_player"
+      ],
+      "priority": 85
+    },
+    "text": "虽然项目只能算勉强完成，但你在这个过程中学会了工作与生活的平衡。你建立了深厚的同事友谊，推广了健康的工作方式。甲方爸爸虽然不是很满意，但团队的士气从未如此高涨。你成为了代码城最受欢迎的码农！",
+    "choices": []
+  },
+  "finalState": {
+    "points": {
+      "coding": 13,
+      "caffeine": 19,
+      "social": 25
+    },
+    "attributes": [
+      "is_intern",
+      "high_energy",
+      "quick_learner",
+      "project_started",
+      "detail_oriented",
+      "has_coffee",
+      "coffee_break_done",
+      "frustrated",
+      "keyboard_issue_fixed",
+      "requirement_changed",
+      "stressed",
+      "nervous_energy",
+      "code_review_done",
+      "team_player",
+      "bug_solved",
+      "wellness_advocate",
+      "coffee_crisis_handled"
+    ],
+    "characterId": "persona_intern"
+  },
+  "totalTurns": 23,
+  "pathLog": [
+    {
+      "turn": 0,
+      "action": "character_selected",
+      "character": "热血实习生",
+      "state": {
+        "points": {
+          "coding": 5,
+          "caffeine": 20,
+          "social": 15
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 1,
+      "action": "choice_made",
+      "event": "项目启动",
+      "eventId": "main_01_project_assignment",
+      "choice": "询问详细的技术需求",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 5,
+          "caffeine": 20,
+          "social": 15
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 1,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你仔细询问了技术细节，老王对你的专业态度很满意。",
+        "points_change": {
+          "coding": 2,
+          "social": 3
+        },
+        "attributes_add": [
+          "project_started",
+          "detail_oriented"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 7,
+          "caffeine": 20,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 2,
+      "action": "choice_made",
+      "event": "咖啡时光",
+      "eventId": "common_coffee_break",
+      "choice": "来一杯浓缩咖啡",
+      "choiceIndex": 0,
+      "stateBefore": {
+        "points": {
+          "coding": 7,
+          "caffeine": 20,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 2,
+      "action": "state_updated",
+      "outcome": {
+        "text": "浓郁的咖啡让你瞬间精神焕发！不过心跳有点快...",
+        "points_change": {
+          "caffeine": 3,
+          "coding": 1
+        },
+        "attributes_add": [
+          "has_coffee",
+          "coffee_break_done"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 8,
+          "caffeine": 23,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 5,
+      "action": "choice_made",
+      "event": "键盘闹情绪",
+      "eventId": "common_keyboard_tantrum",
+      "choice": "将就着用屏幕键盘",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 8,
+          "caffeine": 23,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 5,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你只能用屏幕键盘慢慢敲代码，效率大幅下降...",
+        "points_change": {
+          "coding": -2,
+          "caffeine": -1
+        },
+        "attributes_add": [
+          "frustrated",
+          "keyboard_issue_fixed"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 6,
+          "caffeine": 22,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 8,
+      "action": "choice_made",
+      "event": "需求大变更",
+      "eventId": "main_02_requirement_change",
+      "choice": "表达不满但接受变更",
+      "choiceIndex": 0,
+      "stateBefore": {
+        "points": {
+          "coding": 6,
+          "caffeine": 22,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 8,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你虽然有些抱怨，但还是接受了变更。老王有些尴尬但很感激。",
+        "points_change": {
+          "coding": 2,
+          "social": 2,
+          "caffeine": -2
+        },
+        "attributes_add": [
+          "requirement_changed",
+          "stressed"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 8,
+          "caffeine": 20,
+          "social": 20
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 10,
+      "action": "choice_made",
+      "event": "代码评审",
+      "eventId": "common_code_review",
+      "choice": "紧张地为代码辩护",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 8,
+          "caffeine": 20,
+          "social": 20
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 10,
+      "action": "state_updated",
+      "outcome": {
+        "text": "过量的咖啡因让你说话很快，架构师皱了皱眉头。",
+        "points_change": {
+          "social": -2,
+          "caffeine": -1
+        },
+        "attributes_add": [
+          "nervous_energy",
+          "code_review_done"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 8,
+          "caffeine": 19,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "nervous_energy",
+          "code_review_done"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 15,
+      "action": "choice_made",
+      "event": "Bug大军来袭",
+      "eventId": "main_03_bug_invasion",
+      "choice": "请求同事协助调试",
+      "choiceIndex": 0,
+      "stateBefore": {
+        "points": {
+          "coding": 8,
+          "caffeine": 19,
+          "social": 18
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "nervous_energy",
+          "code_review_done"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 15,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你组织了一个调试小队，大家分工合作，很快就解决了Bug问题。",
+        "points_change": {
+          "social": 4,
+          "coding": 3
+        },
+        "attributes_add": [
+          "team_player",
+          "bug_solved"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 11,
+          "caffeine": 19,
+          "social": 22
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "nervous_energy",
+          "code_review_done",
+          "team_player",
+          "bug_solved"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 22,
+      "action": "choice_made",
+      "event": "咖啡危机",
+      "eventId": "main_04_coffee_crisis",
+      "choice": "趁机推广健康的工作方式",
+      "choiceIndex": 1,
+      "stateBefore": {
+        "points": {
+          "coding": 11,
+          "caffeine": 19,
+          "social": 22
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "nervous_energy",
+          "code_review_done",
+          "team_player",
+          "bug_solved"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 22,
+      "action": "state_updated",
+      "outcome": {
+        "text": "你组织了茶话会和健身活动，虽然有些同事不满，但身体更健康了。",
+        "points_change": {
+          "social": 3,
+          "coding": 2
+        },
+        "attributes_add": [
+          "wellness_advocate",
+          "coffee_crisis_handled"
+        ],
+        "attributes_remove": []
+      },
+      "stateAfter": {
+        "points": {
+          "coding": 13,
+          "caffeine": 19,
+          "social": 25
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "nervous_energy",
+          "code_review_done",
+          "team_player",
+          "bug_solved",
+          "wellness_advocate",
+          "coffee_crisis_handled"
+        ],
+        "characterId": "persona_intern"
+      }
+    },
+    {
+      "turn": 23,
+      "action": "ending_reached",
+      "ending": "佛系码农",
+      "endingId": "ending_zen_coder",
+      "finalState": {
+        "points": {
+          "coding": 13,
+          "caffeine": 19,
+          "social": 25
+        },
+        "attributes": [
+          "is_intern",
+          "high_energy",
+          "quick_learner",
+          "project_started",
+          "detail_oriented",
+          "has_coffee",
+          "coffee_break_done",
+          "frustrated",
+          "keyboard_issue_fixed",
+          "requirement_changed",
+          "stressed",
+          "nervous_energy",
+          "code_review_done",
+          "team_player",
+          "bug_solved",
+          "wellness_advocate",
+          "coffee_crisis_handled"
+        ],
+        "characterId": "persona_intern"
+      }
+    }
+  ]
+}

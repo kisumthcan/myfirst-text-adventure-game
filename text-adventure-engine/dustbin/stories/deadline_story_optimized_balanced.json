@@ -1,0 +1,493 @@
+[
+  {
+    "id": "main_01_project_assignment",
+    "name": "项目启动",
+    "turn_range": [
+      1,
+      3
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "!project_started"
+      ],
+      "priority": 10
+    },
+    "text": "产品经理老王走向你的工位，手里拿着一份厚厚的需求文档。'小伙子，公司的未来就靠你了！36天内必须完成这个革命性的应用！'",
+    "choices": [
+      {
+        "text": "充满信心地接受挑战",
+        "conditions": {
+          "attributes": [
+            "is_architect"
+          ]
+        },
+        "outcome": {
+          "text": "作为资深架构师，你快速浏览了需求文档，心中已有了技术方案。",
+          "points_change": {
+            "coding": 3,
+            "social": 2
+          },
+          "attributes_add": [
+            "project_started",
+            "confident_start"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "谦虚地表示会努力完成",
+        "conditions": {
+          "attributes": [
+            "is_intern"
+          ]
+        },
+        "outcome": {
+          "text": "作为实习生，你虽然紧张但充满干劲。老王被你的态度感动了。",
+          "points_change": {
+            "social": 4,
+            "coding": 2
+          },
+          "attributes_add": [
+            "project_started",
+            "humble_start"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "询问详细的技术需求",
+        "outcome": {
+          "text": "你仔细询问了技术细节，老王对你的专业态度很满意。",
+          "points_change": {
+            "coding": 2,
+            "social": 3
+          },
+          "attributes_add": [
+            "project_started",
+            "detail_oriented"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "main_02_requirement_change",
+    "name": "需求大变更",
+    "turn_range": [
+      8,
+      12
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "project_started",
+        "!requirement_changed"
+      ],
+      "priority": 15
+    },
+    "text": "就在你写了一周代码后，老王又来了：'不好意思，甲方爸爸说要改需求，之前的功能都不要了，换成区块链AI大数据的...'",
+    "choices": [
+      {
+        "text": "冷静分析新需求的可行性",
+        "conditions": {
+          "points": {
+            "coding": 12,
+            "social": 8
+          }
+        },
+        "outcome": {
+          "text": "你专业地分析了新需求，指出了技术难点和时间成本，老王表示理解。",
+          "points_change": {
+            "coding": 3,
+            "social": 4
+          },
+          "attributes_add": [
+            "requirement_changed",
+            "requirement_analyzed",
+            "professional_response"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "表达不满但接受变更",
+        "outcome": {
+          "text": "你虽然有些抱怨，但还是接受了变更。老王有些尴尬但很感激。",
+          "points_change": {
+            "coding": 2,
+            "social": 2,
+            "caffeine": -2
+          },
+          "attributes_add": [
+            "requirement_changed",
+            "stressed"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "建议保留部分原有功能",
+        "conditions": {
+          "points": {
+            "social": 10
+          }
+        },
+        "outcome": {
+          "text": "你巧妙地建议了一个折中方案，既满足新需求又保留了部分已完成的工作。",
+          "points_change": {
+            "social": 5,
+            "coding": 2
+          },
+          "attributes_add": [
+            "requirement_changed",
+            "requirement_negotiated",
+            "diplomatic"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "main_03_bug_invasion",
+    "name": "Bug大军来袭",
+    "turn_range": [
+      15,
+      20
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "project_started",
+        "!bug_solved"
+      ],
+      "priority": 12
+    },
+    "text": "测试小姐姐阿丽发现了一个严重的Bug，更可怕的是，这个Bug似乎有了自我意识，开始在代码库中疯狂繁殖！",
+    "choices": [
+      {
+        "text": "使用高级调试技巧追踪Bug",
+        "conditions": {
+          "points": {
+            "coding": 18
+          }
+        },
+        "outcome": {
+          "text": "你施展了传说中的'橡皮鸭调试法'，成功定位并消灭了Bug女王！",
+          "points_change": {
+            "coding": 5
+          },
+          "attributes_add": [
+            "bug_slayer",
+            "debugging_master",
+            "bug_solved"
+          ],
+          "attributes_remove": [
+            "stressed"
+          ]
+        }
+      },
+      {
+        "text": "请求同事协助调试",
+        "conditions": {
+          "points": {
+            "social": 12
+          }
+        },
+        "outcome": {
+          "text": "你组织了一个调试小队，大家分工合作，很快就解决了Bug问题。",
+          "points_change": {
+            "social": 4,
+            "coding": 3
+          },
+          "attributes_add": [
+            "team_player",
+            "bug_solved"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "熬夜独自解决问题",
+        "outcome": {
+          "text": "你熬了个通宵，虽然解决了Bug，但身体状况很糟糕。",
+          "points_change": {
+            "coding": 3,
+            "caffeine": -3
+          },
+          "attributes_add": [
+            "bug_solved",
+            "exhausted",
+            "lone_wolf"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "main_04_coffee_crisis",
+    "name": "咖啡危机",
+    "turn_range": [
+      22,
+      26
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "project_started",
+        "!coffee_crisis_handled"
+      ],
+      "priority": 8
+    },
+    "text": "灾难发生了！办公室的咖啡机集体罢工，整个代码城陷入了咖啡恐慌。程序员们开始出现戒断症状。",
+    "choices": [
+      {
+        "text": "发挥社交能力寻找替代方案",
+        "conditions": {
+          "points": {
+            "social": 15
+          }
+        },
+        "outcome": {
+          "text": "你联系了楼下咖啡店，成功为整个团队订购了外卖咖啡，成为了办公室英雄！",
+          "points_change": {
+            "social": 6,
+            "caffeine": 3
+          },
+          "attributes_add": [
+            "coffee_hero",
+            "team_savior",
+            "coffee_crisis_handled"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "修理咖啡机",
+        "conditions": {
+          "points": {
+            "coding": 15
+          },
+          "attributes": [
+            "!coffee_addiction"
+          ]
+        },
+        "outcome": {
+          "text": "你把修复键盘的技能用到了咖啡机上，成功让它重新工作！",
+          "points_change": {
+            "coding": 3,
+            "caffeine": 2
+          },
+          "attributes_add": [
+            "machine_whisperer",
+            "coffee_crisis_handled"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "趁机推广健康的工作方式",
+        "outcome": {
+          "text": "你组织了茶话会和健身活动，虽然有些同事不满，但身体更健康了。",
+          "points_change": {
+            "social": 3,
+            "coding": 2
+          },
+          "attributes_add": [
+            "wellness_advocate",
+            "coffee_crisis_handled"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "默默承受咖啡因戒断症状",
+        "outcome": {
+          "text": "没有咖啡的日子很难熬，你的工作效率明显下降...",
+          "points_change": {
+            "coding": -2,
+            "caffeine": -2
+          },
+          "attributes_add": [
+            "caffeine_withdrawal",
+            "coffee_crisis_handled"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "main_05_final_demo",
+    "name": "终极演示",
+    "turn_range": [
+      30,
+      35
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "project_started",
+        "!final_demo_done"
+      ],
+      "priority": 20
+    },
+    "text": "死线倒计时！甲方爸爸亲自来到办公室，要求看最终的项目演示。所有人的目光都聚焦在你身上。",
+    "choices": [
+      {
+        "text": "完美展示所有功能",
+        "conditions": {
+          "points": {
+            "coding": 15,
+            "social": 8,
+            "caffeine": 3
+          }
+        },
+        "outcome": {
+          "text": "你的演示完美无缺！甲方爸爸满意地点头，项目大获成功！",
+          "points_change": {
+            "coding": 6,
+            "social": 6
+          },
+          "attributes_add": [
+            "demo_perfect",
+            "project_success",
+            "final_demo_done"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "诚实汇报项目进度和困难",
+        "conditions": {
+          "points": {
+            "social": 15
+          }
+        },
+        "outcome": {
+          "text": "你坦诚地说明了项目情况，甲方爸爸欣赏你的诚实，给了延期机会。",
+          "points_change": {
+            "social": 5
+          },
+          "attributes_add": [
+            "honest_communication",
+            "project_extended",
+            "final_demo_done",
+            "project_success"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "展示核心功能，暂时隐藏问题",
+        "conditions": {
+          "points": {
+            "coding": 12
+          }
+        },
+        "outcome": {
+          "text": "你巧妙地展示了可用的功能，暂时掩盖了问题，争取了更多时间。",
+          "points_change": {
+            "coding": 3,
+            "social": 2
+          },
+          "attributes_add": [
+            "demo_partial",
+            "bought_time",
+            "final_demo_done"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "ending_legendary_programmer",
+    "name": "传奇程序员",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "coding": 18,
+        "social": 10
+      },
+      "attributes": [
+        "project_success",
+        "demo_perfect"
+      ],
+      "priority": 100
+    },
+    "text": "恭喜你！你不仅完美完成了项目，还在过程中展现了卓越的技术能力和领导力。甲方爸爸当场决定投资你的下一个项目，代码城的市长要为你颁发'年度最佳程序员'奖章！你成为了代码城的传奇人物！",
+    "choices": []
+  },
+  {
+    "id": "ending_workaholic",
+    "name": "加班狂魔",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "coding": 18
+      },
+      "attributes": [
+        "exhausted",
+        "lone_wolf"
+      ],
+      "priority": 90
+    },
+    "text": "项目成功了，但代价是什么？你的眼睛布满血丝，手指在键盘上颤抖。同事们都害怕你那空洞的眼神。你完成了项目，但失去了自己。从今以后，你只知道写代码，再也无法感受生活的乐趣...",
+    "choices": []
+  },
+  {
+    "id": "ending_zen_coder",
+    "name": "佛系码农",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "social": 18
+      },
+      "attributes": [
+        "wellness_advocate",
+        "team_player"
+      ],
+      "priority": 85
+    },
+    "text": "虽然项目只能算勉强完成，但你在这个过程中学会了工作与生活的平衡。你建立了深厚的同事友谊，推广了健康的工作方式。甲方爸爸虽然不是很满意，但团队的士气从未如此高涨。你成为了代码城最受欢迎的码农！",
+    "choices": []
+  },
+  {
+    "id": "ending_career_change",
+    "name": "转行大师",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "coding": 8
+      },
+      "attributes": [
+        "frustrated",
+        "caffeine_withdrawal"
+      ],
+      "priority": 80
+    },
+    "text": "经历了这36天的折磨，你终于认清了现实：编程不适合你。你毅然决然地辞职，在代码城开了一家煎饼果子摊。奇迹般的是，你的煎饼果子生意火爆！原来你真正的天赋在烹饪。许多程序员排队来买你的煎饼果子，你反而比写代码时更快乐了！",
+    "choices": []
+  },
+  {
+    "id": "ending_legendary_programmer_alt",
+    "name": "传奇程序员(技术路线)",
+    "type": "ending",
+    "conditions": {
+      "points": {
+        "coding": 15
+      },
+      "attributes": [
+        "code_approved",
+        "demo_perfect"
+      ],
+      "priority": 95
+    },
+    "text": "虽然你的社交能力一般，但你的技术实力有目共睹！代码审查获得了架构师的认可，Bug调试展现了深厚功底，项目演示技惊四座。技术就是你最好的名片，你成为了代码城备受尊敬的技术大牛！",
+    "choices": []
+  }
+]

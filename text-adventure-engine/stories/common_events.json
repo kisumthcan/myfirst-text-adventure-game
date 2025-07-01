@@ -1,0 +1,197 @@
+[
+  {
+    "id": "common_coffee_break",
+    "name": "咖啡时光",
+    "turn_range": [
+      1,
+      36
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "!coffee_break_done"
+      ],
+      "priority": 1
+    },
+    "text": "你感到有些疲惫，办公室的咖啡机正在诱惑地冒着热气。",
+    "choices": [
+      {
+        "text": "来一杯浓缩咖啡",
+        "outcome": {
+          "text": "浓郁的咖啡让你瞬间精神焕发！不过心跳有点快...",
+          "points_change": {
+            "caffeine": 3,
+            "coding": 1
+          },
+          "attributes_add": [
+            "has_coffee",
+            "coffee_break_done"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "喝杯白开水就好",
+        "outcome": {
+          "text": "简单的白开水让你保持了清醒，虽然没有咖啡那么提神。",
+          "points_change": {
+            "social": 1
+          },
+          "attributes_add": [
+            "health_conscious",
+            "coffee_break_done"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "common_keyboard_tantrum",
+    "name": "键盘闹情绪",
+    "turn_range": [
+      5,
+      30
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "!keyboard_issue_fixed"
+      ],
+      "priority": 2
+    },
+    "text": "你的机械键盘突然开始罢工，有些按键失灵了。这在代码城是很常见的现象。",
+    "choices": [
+      {
+        "text": "用高超的技术修复键盘",
+        "conditions": {
+          "points": {
+            "coding": 10
+          }
+        },
+        "outcome": {
+          "text": "你迅速诊断出问题并修复了键盘，同事们对你刮目相看！",
+          "points_change": {
+            "coding": 2,
+            "social": 1
+          },
+          "attributes_add": [
+            "keyboard_master",
+            "keyboard_issue_fixed"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "找同事借一个键盘",
+        "conditions": {
+          "points": {
+            "social": 8
+          }
+        },
+        "outcome": {
+          "text": "你成功说服了同事借给你备用键盘，人际关系果然重要！",
+          "points_change": {
+            "social": 2
+          },
+          "attributes_add": [
+            "borrowed_keyboard",
+            "keyboard_issue_fixed"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "将就着用屏幕键盘",
+        "outcome": {
+          "text": "你只能用屏幕键盘慢慢敲代码，效率大幅下降...",
+          "points_change": {
+            "coding": -2,
+            "caffeine": -1
+          },
+          "attributes_add": [
+            "frustrated",
+            "keyboard_issue_fixed"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "common_code_review",
+    "name": "代码评审",
+    "turn_range": [
+      10,
+      25
+    ],
+    "conditions": {
+      "points": {},
+      "attributes": [
+        "!code_review_done"
+      ],
+      "priority": 3
+    },
+    "text": "资深架构师要对你的代码进行评审。他戴着厚厚的眼镜，表情严肃。",
+    "choices": [
+      {
+        "text": "自信地展示你的代码",
+        "conditions": {
+          "points": {
+            "coding": 15,
+            "social": 5
+          }
+        },
+        "outcome": {
+          "text": "架构师点了点头：'代码质量不错，逻辑清晰。继续保持！'",
+          "points_change": {
+            "coding": 3,
+            "social": 2
+          },
+          "attributes_add": [
+            "code_approved",
+            "architect_respect",
+            "code_review_done",
+            "demo_perfect"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "虚心请教改进建议",
+        "outcome": {
+          "text": "架构师被你的谦逊态度打动，耐心指出了几个优化点。",
+          "points_change": {
+            "coding": 2,
+            "social": 3
+          },
+          "attributes_add": [
+            "learned_optimization",
+            "code_review_done"
+          ],
+          "attributes_remove": []
+        }
+      },
+      {
+        "text": "紧张地为代码辩护",
+        "conditions": {
+          "points": {
+            "caffeine": 15
+          }
+        },
+        "outcome": {
+          "text": "过量的咖啡因让你说话很快，架构师皱了皱眉头。",
+          "points_change": {
+            "social": -2,
+            "caffeine": -1
+          },
+          "attributes_add": [
+            "nervous_energy",
+            "code_review_done"
+          ],
+          "attributes_remove": []
+        }
+      }
+    ]
+  }
+]
